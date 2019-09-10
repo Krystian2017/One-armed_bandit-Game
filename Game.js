@@ -39,11 +39,11 @@ class Game {
  }
 
  startGame() {
-  if (this.inputBid.value < 1) return alert('Kwota, którą chcesz grać jest za mała!')
+  if (this.inputBid.value < 1) return alert('The amount you want to play is too small!')
   const bid = Math.floor(this.inputBid.value);
 
   if (!this.wallet.checkCanPlay(bid)) {
-   return alert("masz za mało środków lub podana została nieprawidłowa wartość")
+   return alert("you do not have enough funds or you entered the wrong value")
   }
 
   this.wallet.changeWallet(bid, '-');
